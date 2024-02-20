@@ -43,12 +43,12 @@
                 $mail->isSMTP();                                            //Send using SMTP
                 $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
                 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                $mail->Username   = 'seuemail';                     //SMTP username -- Não achou que eu ia deixar o meu né? kkk
-                $mail->Password   = 'sua_senha';                               //SMTP password -- Não achou que eu ia deixar a minha né? kkk
+                $mail->Username   = 'email@oculto.por.seguranca';                     //SMTP username -- Não achou que eu ia deixar o meu né? kkk
+                $mail->Password   = 'senhaOcultaPorSegurança';                               //SMTP password -- Não achou que eu ia deixar a minha né? kkk
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                 $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
                 //Recipients
-                $mail->setFrom('rondi.rio@gmail.com', 'email');
+                $mail->setFrom('email@oculto.por.seguranca', 'email');
                 $mail->addAddress($mensagem->__get('para'));     //Add a recipient
                 //Content
                 $mail->isHTML(true);                                  //Set email format to HTML
